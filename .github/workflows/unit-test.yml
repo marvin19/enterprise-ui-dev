@@ -16,9 +16,9 @@ jobs:
         uses: actions/setup-node@v3
       - uses: actions/cache@v3
         id: npm-cache
-          with:
-            path: ~/.npm
-            key: npm-${{ hashFiles('**/package-lock.json') }}
+        with:
+          path: ~/.npm
+          key: npm-${{ hashFiles('**/package-lock.json') }}
       - run: npm ci
       - run: npm test
   build:
